@@ -1211,23 +1211,31 @@
     document.getElementById('surveyForm').addEventListener('submit', async (e) => {
       e.preventDefault();
       const form = e.target;
+      const submitBtn = form.querySelector('.submit-btn');
+      submitBtn.textContent = '提交中...';
+      submitBtn.disabled = true;
+      
       const formData = new FormData(form);
       const data = Object.fromEntries(formData.entries());
       
-      // 這裡可以改成你的 Google Sheets Web App URL 或其他後端
-      // 目前先用 console.log 顯示，部署後再接後端
-      console.log('Survey Data:', data);
-      
-      // 顯示感謝頁面
-      form.classList.add('hidden');
-      document.getElementById('thankYou').classList.add('show');
-      document.getElementById('progress').style.width = '100%';
-      
-      // TODO: 串接 Google Sheets
-      // const response = await fetch('YOUR_GOOGLE_SCRIPT_URL', {
-      //   method: 'POST',
-      //   body: JSON.stringify(data)
-      // });
+      try {
+        await fetch('https://script.google.com/macros/s/AKfycbzfsUcow34LwrY8jKmzbQLIgQD-WdQGV2v49mIjgT5hhqlc8mDMNlLkrxl8pA6qHJpU1Q/exec', {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        
+        // 顯示感謝頁面
+        form.classList.add('hidden');
+        document.getElementById('thankYou').classList.add('show');
+        document.getElementById('progress').style.width = '100%';
+      } catch (error) {
+        console.error('Error:', error);
+        alert('提交時發生錯誤，請稍後再試。');
+        submitBtn.textContent = '提交問卷';
+        submitBtn.disabled = false;
+      }
     });
   </script>
 </body>
