@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>反歧視法要來了！你不管它，它要管你！</title>
+  
+  <!-- OG Meta Tags -->
+  <meta property="og:title" content="反歧視法要來了！你不管它，它要管你！">
+  <meta property="og:description" content="平等/不歧視相關法律之影響調查問卷">
+  <meta property="og:image" content="https://weall888-jpg.github.io/anti-discrimination-survey/og-image.png">
+  <meta property="og:url" content="https://weall888-jpg.github.io/anti-discrimination-survey/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --teal-dark: #2d4a4a;
+      --teal-mid: #3d5a58;
+      --teal-light: #4a6b68;
+      --cream: #faf6ed;
+      --cream-dark: #f0ebe0;
+      --gold: #d4a84b;
+      --gold-dark: #b8923f;
+      --text-dark: #1a1a1a;
+      --text-light: #ffffff;
+      --border: #e0dbd0;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal-mid) 100%);
+      color: var(--text-light);
+      padding: 3rem 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 60%;
+      height: 200%;
+      background: rgba(255,255,255,0.03);
+      transform: rotate(15deg);
+    }
+    
+    .header h1 {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+    
+    .header .icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    
+    .header p {
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 0.95rem;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    
+    .intro-card {
+      background: white;
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-left: 4px solid var(--gold);
+    }
+    
+    .intro-card h2 {
+      color: var(--teal-dark);
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .intro-card p {
+      color: #555;
+      font-size: 0.9rem;
+    }
+    
+    .org-info {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: #666;
+    }
+    
+    .question-section {
+      background: white;
+      border-radius: 16px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+    
+    .section-header {
+      background: var(--teal-dark);
+      color: var(--text-light);
+      padding: 1rem 1.5rem;
+      font-weight: 500;
+    }
+    
+    .question {
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .question:last-child {
+      border-bottom: none;
+    }
+    
+    .question-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--gold);
+      color: white;
+      border-radius: 50%;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-right: 0.75rem;
+      flex-shrink: 0;
+    }
+    
+    .question-text {
+      font-weight: 500;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .question-text span {
+      flex: 1;
+    }
+    
+    .note {
+      background: var(--cream);
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: #666;
+      margin: 0.75rem 0 1rem 0;
+      border-left: 3px solid var(--gold);
+    }
+    
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .option {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      background: var(--cream);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: 2px solid transparent;
+    }
+    
+    .option:hover {
+      background: var(--cream-dark);
+    }
+    
+    .option input {
+      display: none;
+    }
+    
+    .option input:checked + .option-indicator {
+      background: var(--teal-dark);
+      border-color: var(--teal-dark);
+    }
+    
+    .option input:checked + .option-indicator::after {
+      content: '✓';
+      color: white;
+      font-size: 0.75rem;
+    }
+    
+    .option-indicator {
+      width: 22px;
+      height: 22px;
+      border: 2px solid #ccc;
+      border-radius: 50%;
+      margin-right: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+    
+    .option-text {
+      font-size: 0.95rem;
+    }
+    
+    .option:has(input:checked) {
+      border-color: var(--teal-dark);
+      background: rgba(45, 74, 74, 0.05);
+    }
+    
+    /* Scale options (horizontal) */
+    .options-scale {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .options-scale .option {
+      flex: 1;
+      min-width: 100px;
+      justify-content: center;
+      text-align: center;
+      padding: 0.75rem 0.5rem;
+    }
+    
+    .options-scale .option-indicator {
+      display: none;
+    }
+    
+    .options-scale .option input:checked ~ .option-text {
+      font-weight: 600;
+    }
+    
+    .options-scale .option:has(input:checked) {
+      background: var(--teal-dark);
+      color: white;
+    }
+    
+    @media (max-width: 600px) {
+      .options-scale {
+        flex-direction: column;
+      }
+      .options-scale .option {
+        min-width: auto;
+      }
+    }
+    
+    /* Dropdown */
+    .select-wrapper {
+      position: relative;
+    }
+    
+    .select-wrapper select {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      font-size: 1rem;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      background: var(--cream);
+      cursor: pointer;
+      appearance: none;
+      font-family: inherit;
+    }
+    
+    .select-wrapper::after {
+      content: '▼';
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      font-size: 0.75rem;
+      color: #666;
+    }
+    
+    /* Textarea */
+    textarea {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      background: var(--cream);
+      font-family: inherit;
+      resize: vertical;
+      min-height: 100px;
+    }
+    
+    textarea:focus, select:focus {
+      outline: none;
+      border-color: var(--teal-dark);
+    }
+    
+    /* Submit */
+    .submit-section {
+      text-align: center;
+      padding: 2rem 0;
+    }
+    
+    .submit-btn {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+      color: white;
+      border: none;
+      padding: 1rem 3rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(212, 168, 75, 0.3);
+      font-family: inherit;
+    }
+    
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 168, 75, 0.4);
+    }
+    
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      color: #888;
+      font-size: 0.85rem;
+    }
+    
+    /* Progress */
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: var(--gold);
+      transition: width 0.3s;
+      z-index: 100;
+    }
+    
+    /* Thank you page */
+    .thank-you {
+      display: none;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    
+    .thank-you.show {
+      display: block;
+    }
+    
+    .thank-you h2 {
+      color: var(--teal-dark);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .thank-you p {
+      color: #666;
+      font-size: 1.1rem;
+    }
+    
+    .checkmark {
+      width: 80px;
+      height: 80px;
+      background: var(--teal-dark);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .checkmark::after {
+      content: '✓';
+      color: white;
+      font-size: 2.5rem;
+    }
+    
+    form.hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="progress-bar" id="progress"></div>
+  
+  <header class="header">
+    <span class="icon">⚖️</span>
+    <h1>反歧視法要來了！<br>你不管它，它要管你！</h1>
+    <p>平等/不歧視相關法律之影響調查</p>
+  </header>
+  
+  <main class="container">
+    <div class="intro-card">
+      <h2>📋 問卷說明</h2>
+      <p>本調查欲瞭解民眾對2024年5月《反歧視法草案》潛在相關影響與態度。本問卷蒐集15年內他國案例(英、加等國)；共23題，及9題基本資料，內有2題反向題，需留心作答。本問卷為匿名填答，再次謝謝您。</p>
+      <div class="org-info">
+        <strong>問卷發起單位：</strong>台灣婦女維護生命協會（台內社字第0930041317號）<br>
+        捍衛台灣人基本權利連線
+      </div>
+    </div>
+    
+    <form id="surveyForm">
+      <!-- 案例題組 -->
+      <div class="question-section">
+        <div class="section-header">📖 案例認知與態度</div>
+        
+        <!-- Q1 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">1a</span>
+            <span>加拿大性侵犯Shane自稱*男跨女，被允許入住女子庇護所，性侵女院友。</span>
+          </div>
+          <div class="note">*男跨女：指生理男性，心理認為自己是女性；沒有動過變性手術，保有陰莖睪丸。</div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q1a" value="知道" required><span class="option-indicator"></span><span class="option-text">知道</span></label>
+            <label class="option"><input type="radio" name="q1a" value="不知道"><span class="option-indicator"></span><span class="option-text">不知道</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">1b</span>
+            <span>承上題，您對此感到認同？</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q1b" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q1b" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q1b" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q1b" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q1b" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q2 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">2</span>
+            <span>本法讓男跨女可合法進入女性專屬空間，會威脅到女性身心安全。（法條第2、3條）</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q2" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q2" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q2" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q2" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q2" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q3 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">3a</span>
+            <span>台師大讓有男性生殖器的男跨女使用泳池女更衣室和女廁，不接受女泳客抗議。</span>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q3a" value="知道" required><span class="option-indicator"></span><span class="option-text">知道</span></label>
+            <label class="option"><input type="radio" name="q3a" value="不知道"><span class="option-indicator"></span><span class="option-text">不知道</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">3b</span>
+            <span>承上題，您對此感到認同？</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q3b" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q3b" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q3b" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q3b" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q3b" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q4 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">4a</span>
+            <span>英美加等多國，男跨女或變性女參加女子組運動競賽，常包辦前三名。</span>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q4a" value="知道" required><span class="option-indicator"></span><span class="option-text">知道</span></label>
+            <label class="option"><input type="radio" name="q4a" value="不知道"><span class="option-indicator"></span><span class="option-text">不知道</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">4b</span>
+            <span>承上題，您對此感到認同？</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q4b" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q4b" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q4b" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q4b" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q4b" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q5 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">5a</span>
+            <span>美國*變性女選手Fox參加女子組綜合格鬥賽，打碎生理女選手Brents的頭骨，並造成她嚴重腦震盪。</span>
+          </div>
+          <div class="note">*變性女：男性經手術摘除陰莖及睪丸，身分證上變更為女性。</div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q5a" value="知道" required><span class="option-indicator"></span><span class="option-text">知道</span></label>
+            <label class="option"><input type="radio" name="q5a" value="不知道"><span class="option-indicator"></span><span class="option-text">不知道</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">5b</span>
+            <span>承上題，您對此感到認同？</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q5b" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q5b" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q5b" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q5b" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q5b" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q6 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">6</span>
+            <span>本法讓男跨女可合法參與女子組比賽，會威脅女性選手安全及運動前途。（第2、3條）</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q6" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q6" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q6" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q6" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q6" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q7 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">7a</span>
+            <span>2023年起，我國教育部開放男跨女參與全中運、全大運女子賽事。</span>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q7a" value="知道" required><span class="option-indicator"></span><span class="option-text">知道</span></label>
+            <label class="option"><input type="radio" name="q7a" value="不知道"><span class="option-indicator"></span><span class="option-text">不知道</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">7b</span>
+            <span>承上題，您對此感到認同？</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q7b" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q7b" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q7b" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q7b" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q7b" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q8 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">8a</span>
+            <span>加拿大Carolyn老師，因批評某兒童繪本「美化跨性別用藥和手術」，而被禁止入校。</span>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q8a" value="知道" required><span class="option-indicator"></span><span class="option-text">知道</span></label>
+            <label class="option"><input type="radio" name="q8a" value="不知道"><span class="option-indicator"></span><span class="option-text">不知道</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">8b</span>
+            <span>承上題，您對此感到認同？</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q8b" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q8b" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q8b" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q8b" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q8b" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q9 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">9a</span>
+            <span>加拿大Brière醫師為女跨男個案看診，提及她是生理女，使得個案不悅，遭停職3個月。</span>
+          </div>
+          <div class="note">*女跨男：生理女性，心理認為自己是男性；沒有動過變性手術，保有卵巢子宮。</div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q9a" value="知道" required><span class="option-indicator"></span><span class="option-text">知道</span></label>
+            <label class="option"><input type="radio" name="q9a" value="不知道"><span class="option-indicator"></span><span class="option-text">不知道</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">9b</span>
+            <span>承上題，您對此感到認同？</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q9b" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q9b" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q9b" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q9b" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q9b" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q10 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">10a</span>
+            <span>墨西哥議員Quadri批評「男跨女佔據國會婦女保障名額」，男跨女議員Salma不滿而提告，Quadri被判有罪。</span>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q10a" value="知道" required><span class="option-indicator"></span><span class="option-text">知道</span></label>
+            <label class="option"><input type="radio" name="q10a" value="不知道"><span class="option-indicator"></span><span class="option-text">不知道</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">10b</span>
+            <span>承上題，您對此感到認同？</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q10b" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q10b" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q10b" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q10b" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q10b" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q11 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">11a</span>
+            <span>任何人主觀覺得遭到不舒服的言行對待，只要符合受保護特徵，就可以提出訴訟（第2條）。</span>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q11a" value="知道" required><span class="option-indicator"></span><span class="option-text">知道</span></label>
+            <label class="option"><input type="radio" name="q11a" value="不知道"><span class="option-indicator"></span><span class="option-text">不知道</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">11b</span>
+            <span>承上題，您對此感到認同？</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q11b" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q11b" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q11b" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q11b" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q11b" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q12 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">12a</span>
+            <span>本法使「不受（別人）歧視的權利」高於一切人權，如：女性安全、言論自由等。</span>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q12a" value="知道" required><span class="option-indicator"></span><span class="option-text">知道</span></label>
+            <label class="option"><input type="radio" name="q12a" value="不知道"><span class="option-indicator"></span><span class="option-text">不知道</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">12b</span>
+            <span>承上題，您對此感到認同？</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q12b" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q12b" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q12b" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q12b" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q12b" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q13 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">13a</span>
+            <span>美國天主教醫院遵守教義，不為女跨男Jesse切除健康子宮，被告且敗訴。</span>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q13a" value="知道" required><span class="option-indicator"></span><span class="option-text">知道</span></label>
+            <label class="option"><input type="radio" name="q13a" value="不知道"><span class="option-indicator"></span><span class="option-text">不知道</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">13b</span>
+            <span>承上題，您對此感到認同？</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q13b" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q13b" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q13b" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q13b" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q13b" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q14 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">14a</span>
+            <span>美國Mid Vermont基督教中學女籃隊因宗教信仰，拒絕與男跨女球員競賽，被永久禁賽。</span>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q14a" value="知道" required><span class="option-indicator"></span><span class="option-text">知道</span></label>
+            <label class="option"><input type="radio" name="q14a" value="不知道"><span class="option-indicator"></span><span class="option-text">不知道</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">14b</span>
+            <span>承上題，您對此感到認同？</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q14b" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q14b" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q14b" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q14b" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q14b" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q15 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">15a</span>
+            <span>美國花藝師Stutzman因信仰拒絕同婚婚禮花藝布置，遭州政府起訴。</span>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q15a" value="知道" required><span class="option-indicator"></span><span class="option-text">知道</span></label>
+            <label class="option"><input type="radio" name="q15a" value="不知道"><span class="option-indicator"></span><span class="option-text">不知道</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">15b</span>
+            <span>承上題，您對此感到認同？</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q15b" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q15b" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q15b" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q15b" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q15b" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q16 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">16a</span>
+            <span>「宗教信仰」與「性傾向、性別認同」皆屬受保護特徵，當發生衝突時，反歧視相關法律施行國的判決，多不利宗教信仰。</span>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q16a" value="知道" required><span class="option-indicator"></span><span class="option-text">知道</span></label>
+            <label class="option"><input type="radio" name="q16a" value="不知道"><span class="option-indicator"></span><span class="option-text">不知道</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">16b</span>
+            <span>承上題，您對此感到認同？</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q16b" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q16b" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q16b" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q16b" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q16b" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q17 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">17a</span>
+            <span>徵人啟事提及「洗碗歐巴桑」、「搬重男性佳」，因涉及年齡、性別歧視，按現行法令，遭罰30萬元。本法通過後，商家可能需再額外賠償提告方（第19條）。</span>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q17a" value="知道" required><span class="option-indicator"></span><span class="option-text">知道</span></label>
+            <label class="option"><input type="radio" name="q17a" value="不知道"><span class="option-indicator"></span><span class="option-text">不知道</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">17b</span>
+            <span>承上題，您對此感到認同？</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q17b" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q17b" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q17b" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q17b" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q17b" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q18 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">18a</span>
+            <span>高雄凌男檢舉30家業主徵才歧視，5家被罰；本法通過後，提告方只須簡單描述自己被歧視過程，不須舉證（第20條），人民有機會多告多賺（第19條*），恐引發濫訴。</span>
+          </div>
+          <div class="note">*每人每件新台幣一千~三十萬元計算。</div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q18a" value="知道" required><span class="option-indicator"></span><span class="option-text">知道</span></label>
+            <label class="option"><input type="radio" name="q18a" value="不知道"><span class="option-indicator"></span><span class="option-text">不知道</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">18b</span>
+            <span>承上題，您對此感到認同？</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q18b" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q18b" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q18b" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q18b" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q18b" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q19 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">19a</span>
+            <span>加拿大女性美體店家Mad Wax Windsor Inc.，因拒絕為男跨女做腿部除毛，被判賠約新台幣78萬元。</span>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q19a" value="知道" required><span class="option-indicator"></span><span class="option-text">知道</span></label>
+            <label class="option"><input type="radio" name="q19a" value="不知道"><span class="option-indicator"></span><span class="option-text">不知道</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">19b</span>
+            <span>承上題，您對此感到認同？</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q19b" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q19b" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q19b" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q19b" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q19b" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q20 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">20a</span>
+            <span>一旦被告歧視/騷擾，被告必須證明自己沒有歧視/騷擾。（第20條）</span>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q20a" value="知道" required><span class="option-indicator"></span><span class="option-text">知道</span></label>
+            <label class="option"><input type="radio" name="q20a" value="不知道"><span class="option-indicator"></span><span class="option-text">不知道</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">20b</span>
+            <span>承上題，您對此感到認同？</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q20b" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q20b" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q20b" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q20b" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q20b" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q21 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">21a</span>
+            <span>事發5年內皆可提告求償；被告恐難以舉證反駁，容易敗訴而需負擔賠償責任。（第19、22條）</span>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q21a" value="知道" required><span class="option-indicator"></span><span class="option-text">知道</span></label>
+            <label class="option"><input type="radio" name="q21a" value="不知道"><span class="option-indicator"></span><span class="option-text">不知道</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">21b</span>
+            <span>承上題，您對此感到認同？</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q21b" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q21b" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q21b" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q21b" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q21b" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q22 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">22a</span>
+            <span>雖然「基於宗教信仰所為，不構成歧視」，但什麼是出自宗教信仰的作為，並非由宗教團體認定，恐違反宗教自由。（第16、17條）</span>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q22a" value="知道" required><span class="option-indicator"></span><span class="option-text">知道</span></label>
+            <label class="option"><input type="radio" name="q22a" value="不知道"><span class="option-indicator"></span><span class="option-text">不知道</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">22b</span>
+            <span>承上題，您對此感到認同？</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q22b" value="非常不認同" required><span class="option-text">非常不認同</span></label>
+            <label class="option"><input type="radio" name="q22b" value="不認同"><span class="option-text">不認同</span></label>
+            <label class="option"><input type="radio" name="q22b" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q22b" value="認同"><span class="option-text">認同</span></label>
+            <label class="option"><input type="radio" name="q22b" value="非常認同"><span class="option-text">非常認同</span></label>
+          </div>
+        </div>
+        
+        <!-- Q23 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">23</span>
+            <span>反歧視法對人民言論與行為自由的影響。</span>
+          </div>
+          <div class="options-scale">
+            <label class="option"><input type="radio" name="q23" value="非常負面影響" required><span class="option-text">非常負面影響</span></label>
+            <label class="option"><input type="radio" name="q23" value="負面影響"><span class="option-text">負面影響</span></label>
+            <label class="option"><input type="radio" name="q23" value="普通"><span class="option-text">普通</span></label>
+            <label class="option"><input type="radio" name="q23" value="正面影響"><span class="option-text">正面影響</span></label>
+            <label class="option"><input type="radio" name="q23" value="非常正面影響"><span class="option-text">非常正面影響</span></label>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 基本資料 -->
+      <div class="question-section">
+        <div class="section-header">👤 基本資料</div>
+        
+        <!-- Q24 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">24</span>
+            <span>生理性別：</span>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q24" value="女" required><span class="option-indicator"></span><span class="option-text">女</span></label>
+            <label class="option"><input type="radio" name="q24" value="男"><span class="option-indicator"></span><span class="option-text">男</span></label>
+          </div>
+        </div>
+        
+        <!-- Q25 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">25</span>
+            <span>年齡：</span>
+          </div>
+          <div class="select-wrapper">
+            <select name="q25" required>
+              <option value="">請選擇</option>
+              <option value="18歲以下">18歲以下</option>
+              <option value="18-20歲">18-20歲</option>
+              <option value="21-24歲">21-24歲</option>
+              <option value="25-35歲">25-35歲</option>
+              <option value="36-45歲">36-45歲</option>
+              <option value="46-55歲">46-55歲</option>
+              <option value="56-65歲">56-65歲</option>
+              <option value="66-75歲">66-75歲</option>
+              <option value="76歲以上">76歲以上</option>
+            </select>
+          </div>
+        </div>
+        
+        <!-- Q26 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">26</span>
+            <span>職業（現在或退休前）：</span>
+          </div>
+          <div class="select-wrapper">
+            <select name="q26" required>
+              <option value="">請選擇</option>
+              <option value="法政">法政</option>
+              <option value="服務業">服務業</option>
+              <option value="醫療">醫療</option>
+              <option value="工商業">工商業</option>
+              <option value="學生">學生</option>
+              <option value="軍公教">軍公教</option>
+              <option value="農林漁牧">農林漁牧</option>
+              <option value="其他（家管、待業等）">其他（家管、待業等）</option>
+            </select>
+          </div>
+        </div>
+        
+        <!-- Q27 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">27</span>
+            <span>您居住縣市：</span>
+          </div>
+          <div class="select-wrapper">
+            <select name="q27" required>
+              <option value="">請選擇</option>
+              <option value="臺北市">臺北市</option>
+              <option value="新北市">新北市</option>
+              <option value="基隆">基隆</option>
+              <option value="桃園市">桃園市</option>
+              <option value="新竹縣">新竹縣</option>
+              <option value="新竹市">新竹市</option>
+              <option value="苗栗縣">苗栗縣</option>
+              <option value="臺中市">臺中市</option>
+              <option value="彰化縣">彰化縣</option>
+              <option value="南投縣">南投縣</option>
+              <option value="雲林縣">雲林縣</option>
+              <option value="嘉義市">嘉義市</option>
+              <option value="嘉義縣">嘉義縣</option>
+              <option value="臺南市">臺南市</option>
+              <option value="高雄市">高雄市</option>
+              <option value="屏東縣">屏東縣</option>
+              <option value="宜蘭縣">宜蘭縣</option>
+              <option value="花蓮縣">花蓮縣</option>
+              <option value="臺東縣">臺東縣</option>
+              <option value="澎湖縣">澎湖縣</option>
+              <option value="金門縣">金門縣</option>
+              <option value="連江縣">連江縣</option>
+              <option value="其他">其他</option>
+            </select>
+          </div>
+        </div>
+        
+        <!-- Q28 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">28</span>
+            <span>學歷：</span>
+          </div>
+          <div class="select-wrapper">
+            <select name="q28" required>
+              <option value="">請選擇</option>
+              <option value="國小">國小</option>
+              <option value="國中">國中</option>
+              <option value="高中職">高中職</option>
+              <option value="大專">大專</option>
+              <option value="研究所">研究所</option>
+            </select>
+          </div>
+        </div>
+        
+        <!-- Q29 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">29</span>
+            <span>請問您有子女嗎？</span>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q29" value="無" required><span class="option-indicator"></span><span class="option-text">無</span></label>
+            <label class="option"><input type="radio" name="q29" value="只有女兒"><span class="option-indicator"></span><span class="option-text">只有女兒</span></label>
+            <label class="option"><input type="radio" name="q29" value="只有兒子"><span class="option-indicator"></span><span class="option-text">只有兒子</span></label>
+            <label class="option"><input type="radio" name="q29" value="兒子女兒都有"><span class="option-indicator"></span><span class="option-text">兒子女兒都有</span></label>
+          </div>
+        </div>
+        
+        <!-- Q30 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">30</span>
+            <span>請問您有宗教信仰嗎？</span>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q30" value="有" required><span class="option-indicator"></span><span class="option-text">有</span></label>
+            <label class="option"><input type="radio" name="q30" value="沒有"><span class="option-indicator"></span><span class="option-text">沒有</span></label>
+          </div>
+        </div>
+        
+        <!-- Q31 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">31</span>
+            <span>請問您是否贊成同性婚姻？</span>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q31" value="不贊成" required><span class="option-indicator"></span><span class="option-text">不贊成</span></label>
+            <label class="option"><input type="radio" name="q31" value="沒意見"><span class="option-indicator"></span><span class="option-text">沒意見</span></label>
+            <label class="option"><input type="radio" name="q31" value="贊成"><span class="option-indicator"></span><span class="option-text">贊成</span></label>
+          </div>
+        </div>
+        
+        <!-- Q32 -->
+        <div class="question">
+          <div class="question-text">
+            <span class="question-number">32</span>
+            <span>您其他寶貴意見：</span>
+          </div>
+          <textarea name="q32" placeholder="請輸入您的意見（選填）"></textarea>
+        </div>
+      </div>
+      
+      <div class="submit-section">
+        <button type="submit" class="submit-btn">提交問卷</button>
+      </div>
+    </form>
+    
+    <div class="thank-you" id="thankYou">
+      <div class="checkmark"></div>
+      <h2>感謝您的參與！</h2>
+      <p>您的回覆已成功送出。</p>
+    </div>
+  </main>
+  
+  <footer class="footer">
+    © 2024 台灣婦女維護生命協會・捍衛台灣人基本權利連線
+  </footer>
+  
+  <script>
+    // Progress bar
+    const updateProgress = () => {
+      const form = document.getElementById('surveyForm');
+      const inputs = form.querySelectorAll('input[required], select[required]');
+      const filled = Array.from(inputs).filter(input => {
+        if (input.type === 'radio') {
+          return form.querySelector(`input[name="${input.name}"]:checked`);
+        }
+        return input.value;
+      });
+      const uniqueNames = [...new Set(Array.from(inputs).map(i => i.name))];
+      const filledNames = [...new Set(filled.map(i => i.name))];
+      const progress = (filledNames.length / uniqueNames.length) * 100;
+      document.getElementById('progress').style.width = progress + '%';
+    };
+    
+    document.querySelectorAll('input, select').forEach(el => {
+      el.addEventListener('change', updateProgress);
+    });
+    
+    // Form submission
+    document.getElementById('surveyForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      
+      // 這裡可以改成你的 Google Sheets Web App URL 或其他後端
+      // 目前先用 console.log 顯示，部署後再接後端
+      console.log('Survey Data:', data);
+      
+      // 顯示感謝頁面
+      form.classList.add('hidden');
+      document.getElementById('thankYou').classList.add('show');
+      document.getElementById('progress').style.width = '100%';
+      
+      // TODO: 串接 Google Sheets
+      // const response = await fetch('YOUR_GOOGLE_SCRIPT_URL', {
+      //   method: 'POST',
+      //   body: JSON.stringify(data)
+      // });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d4a4a"/>
+      <stop offset="100%" style="stop-color:#3d5a58"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Decorative elements -->
+  <rect x="0" y="0" width="8" height="630" fill="#d4a84b"/>
+  <circle cx="1100" cy="100" r="150" fill="rgba(255,255,255,0.03)"/>
+  <circle cx="100" cy="530" r="200" fill="rgba(255,255,255,0.02)"/>
+  
+  <!-- Icon -->
+  <text x="600" y="200" font-size="120" text-anchor="middle" fill="#d4a84b">⚖️</text>
+  
+  <!-- Title -->
+  <text x="600" y="320" font-family="Noto Sans TC, sans-serif" font-size="64" font-weight="700" text-anchor="middle" fill="#ffffff">反歧視法要來了！</text>
+  <text x="600" y="400" font-family="Noto Sans TC, sans-serif" font-size="64" font-weight="700" text-anchor="middle" fill="#ffffff">你不管它，它要管你！</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="480" font-family="Noto Sans TC, sans-serif" font-size="28" text-anchor="middle" fill="rgba(255,255,255,0.8)">平等/不歧視相關法律之影響調查問卷</text>
+  
+  <!-- Organization -->
+  <text x="600" y="580" font-family="Noto Sans TC, sans-serif" font-size="20" text-anchor="middle" fill="rgba(255,255,255,0.6)">台灣婦女維護生命協會 ・ 捍衛台灣人基本權利連線</text>
+</svg>
